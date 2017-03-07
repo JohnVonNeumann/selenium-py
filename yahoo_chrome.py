@@ -6,7 +6,7 @@ browser = webdriver.Chrome()
 # call our webdriver on an instance of Chrome
 
 browser.get('http://www.yahoo.com')
-assert 'Yahoo!' in browser.title
+assert 'Yahoo' in browser.title
 # direct browser to yahoo
 # check if title in browser includes the word Yahoo!
 
