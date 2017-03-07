@@ -1,0 +1,18 @@
+1488881196475	geckodriver	INFO	Listening on 127.0.0.1:33096
+1488881197612	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.aOyZHHXHoaeN
+1488881197613	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1488881197616	geckodriver::marionette	INFO	Connecting to Marionette on localhost:37704
+1488881198889	Marionette	INFO	Listening on port 37704
+[Child 20187] ###!!! ABORT: Aborting on channel error.: file /build/firefox-z5GTBX/firefox-51.0.1+build2/ipc/glue/MessageChannel.cpp, line 2056
+[Child 20187] ###!!! ABORT: Aborting on channel error.: file /build/firefox-z5GTBX/firefox-51.0.1+build2/ipc/glue/MessageChannel.cpp, line 2056
+1488922076541	geckodriver	INFO	Listening on 127.0.0.1:59792
+1488922077671	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.cI2j5k2IVvn9
+1488922077671	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1488922077674	geckodriver::marionette	INFO	Connecting to Marionette on localhost:35539
+1488922079076	Marionette	INFO	Listening on port 35539
+1488922100182	geckodriver	INFO	Listening on 127.0.0.1:56077
+1488922101317	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.WKJVJwOEzyQt
+1488922101318	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1488922101321	geckodriver::marionette	INFO	Connecting to Marionette on localhost:34831
+1488922102876	Marionette	INFO	Listening on port 34831
+JavaScript error: chrome://marionette/content/listener.js, line 870: TypeError: can't access dead object
