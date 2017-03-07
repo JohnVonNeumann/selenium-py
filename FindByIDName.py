@@ -9,7 +9,6 @@ class FindByIdName(unittest.TestCase):
         self.elementNameToFind = "show-hide"
         self.driver = webdriver.Firefox()
         self.driver.get(baseUrl)
-        self.addCleanup(self.driver.quit)
 
     def testIdFind(self):
 
@@ -25,6 +24,9 @@ class FindByIdName(unittest.TestCase):
         if elementByName is not None:
             print("We found an element by the name of " + self.elementNameToFind + ".")
             # if we can find our chosen elementByName, print message
+
+    def tearDown(self):
+        self.addCleanup(self.driver.quit)
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)
