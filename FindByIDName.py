@@ -11,16 +11,13 @@ class FindByIdName(unittest.TestCase):
         self.driver.get(baseUrl)
 
     def testIdFind(self):
-
         elementById = self.driver.find_element_by_id(self.elementIdToFind)
-
         if elementById is not None:
             print("We found an element by the ID of " + self.elementIdToFind + ".")
             # if we can find our chosen elementById, print message
 
     def testNameFind(self):
         elementByName = self.driver.find_element_by_name(self.elementNameToFind)
-
         if elementByName is not None:
             print("We found an element by the name of " + self.elementNameToFind + ".")
             # if we can find our chosen elementByName, print message
