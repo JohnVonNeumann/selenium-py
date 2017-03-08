@@ -6,15 +6,15 @@ class LoggerDemoConsole():
     def testLog(self):
 
         #create logger
-        logger = logging.getLogger('sample_log')
+        logger = logging.getLogger(LoggerDemoConsole.__name__)
         logger.setLevel(logging.INFO)
 
         #create console handler and set level to info
-        chandler = logging,StreamHandler()
-        chandler.setLevel(logging.ERROR)
+        chandler = logging.StreamHandler()
+        chandler.setLevel(logging.INFO)
 
         #create formatter
-        formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+        formatter = logging.Formatter('%(asctime)s -%(name)s - %(levelname)s: %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p')
 
         #add formatter to console handler -> ch
         chandler.setFormatter(formatter)
@@ -30,3 +30,4 @@ class LoggerDemoConsole():
         logger.critical('critical messsage')
 
 demo = LoggerDemoConsole()
+demo.testLog()
