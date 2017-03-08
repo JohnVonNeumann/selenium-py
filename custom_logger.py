@@ -15,8 +15,8 @@ def customLogger(logLevel):
     # gives the log file its own named based on method calling it
     fileHandler.setLevel(logLevel)
 
-    formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s
-                        datefmt=''%m/%d/%Y %I:%M:%S %p')
+    formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+                        datefmt='%m/%d/%Y %I:%M:%S %p')
     fileHandler.setFormatter(formatter)
     logger.addHandler(fileHandler)
 
