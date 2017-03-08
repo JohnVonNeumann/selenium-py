@@ -1,4 +1,5 @@
 import logging
+import logging.config
 
 class LoggerDemoConsole():
 # https://docs.python.org/2/howto/logging-cookbook.html#multiple-handlers-and-formatters
@@ -6,6 +7,7 @@ class LoggerDemoConsole():
     def testLog(self):
 
         #create logger
+        logging.config.fileConfig('logging.conf') # allows us to fileConfig directly from a config file, like a Dockerfile build
         logger = logging.getLogger(LoggerDemoConsole.__name__) # ___name__ strips functionality off methods and turns them into strings
         logger.setLevel(logging.INFO) # set the base level of logging
 
