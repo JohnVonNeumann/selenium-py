@@ -15,6 +15,7 @@ class FindByIdName(unittest.TestCase):
         # --------- Do not edit below this line: -------------
         self.driver = webdriver.Firefox()
         self.driver.get(baseUrl)
+        self.log
 
     def testIdFind(self): #simple find by Id test, outputs message on completion
         elementById = self.driver.find_element_by_id(self.elementIdToFind)
@@ -22,6 +23,7 @@ class FindByIdName(unittest.TestCase):
             print("We found an element by the ID of " + self.elementIdToFind + ".")
         else:
             print("Could not find an element by the ID of " + self.elementIdToFind + ".")
+        self.log
 
     def testNameFind(self): # simple find by name test, outputs message on completion
         elementByName = self.driver.find_element_by_name(self.elementNameToFind)
@@ -29,9 +31,11 @@ class FindByIdName(unittest.TestCase):
             print("We found an element by the name of " + self.elementNameToFind + ".")
         else:
             print("Could not find an element by the name of " + self.elementNameToFind + ".")
+        self.log
 
     def tearDown(self): #cleanup resources and close windows when test completes
         self.addCleanup(self.driver.quit)
+        self.log
 
 if __name__ == "__main__": # run cli output and functionality from unittest lib
     unittest.main(verbosity=2)
