@@ -14,7 +14,8 @@ only WARNING+ will actually be output via terminal/to users.
 
 import logging
 
-logging.basicConfig(format = '%(asctime)s:%(levelname)s: %(message)s', level=logging.DEBUG, filename="test.log")
+logging.basicConfig(format = '%(asctime)s:%(levelname)s: %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p',
+                    level=logging.DEBUG, filename="test.log")
 logging.warning("This is a WARNING message.")
 logging.info("This INFO message will not output.")
 logging.error("This is an ERROR message.")

@@ -1,5 +1,6 @@
 from selenium import webdriver
 import unittest
+import logging
 
 class FindByIdName(unittest.TestCase):
 
@@ -11,6 +12,8 @@ class FindByIdName(unittest.TestCase):
         # --------- Do not edit below this line: -------------
         self.driver = webdriver.Firefox()
         self.driver.get(baseUrl)
+        logging.basicConfig(format = '%(asctime)s:%(levelname)s: %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p',
+                            level=logging.DEBUG, filename="test.log")
 
     def testIdFind(self): #simple find by Id test, outputs message on completion
         elementById = self.driver.find_element_by_id(self.elementIdToFind)
