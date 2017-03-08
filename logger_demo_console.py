@@ -6,11 +6,11 @@ class LoggerDemoConsole():
     def testLog(self):
 
         #create logger
-        logger = logging.getLogger(LoggerDemoConsole.__name__)
-        logger.setLevel(logging.INFO)
+        logger = logging.getLogger(LoggerDemoConsole.__name__) # ___name__ strips functionality off methods and turns them into strings
+        logger.setLevel(logging.INFO) # set the base level of logging
 
         #create console handler and set level to info
-        chandler = logging.StreamHandler()
+        chandler = logging.StreamHandler() #StreamHandler is one of many log handlers, in this case, allowing us to move logs to other places
         chandler.setLevel(logging.INFO)
 
         #create formatter
