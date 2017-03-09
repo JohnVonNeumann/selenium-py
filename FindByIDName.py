@@ -37,5 +37,3 @@ class FindByIdName(unittest.TestCase):
 
 if __name__ == "__main__": # run cli output and functionality from unittest lib
     unittest.main(verbosity=2)
-
-demo = FindByIdName()
