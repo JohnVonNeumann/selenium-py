@@ -14,10 +14,11 @@ class KodeItTestSuite(unittest.TestCase):
         # -----------Edit inputs here: ----------
         baseUrl = "https://letskodeit.teachable.com/pages/practice"
         self.elementIdToFind = "mouseover"
-        self.elementClassToFind = "navbar"
+        self.elementClassToFind = "btn-style"
 
         #---------Do not edit below this line ---------
         self.driver = webdriver.Firefox()
+        self.driver.maximize_window()
         self.driver.get(baseUrl)
         self.log.info('Setup Complete.')
 
@@ -34,6 +35,15 @@ class KodeItTestSuite(unittest.TestCase):
             self.log.info("We found an element by the Class Name of " + self.elementClassToFind + ".")
         else:
             self.log.error("Could not find an element by the Class Name of " + self.elementClassToFind + ".")
+    # 
+    # def testSearchEnterName(self):
+    #     elementSearchByName = self.driver.find_element_by_name("enter-name")
+    #     if elementSearchByName is not None:
+    #         self.log.info("We found an element by the name of enter-name")
+    #         self.search_field = self.driver.find_element_by_name("enter-name")
+    #         self.search_field.send_keys("Selenium WebDriver Interview Questions")
+    #         self.search_field.submit()
+
 
 
 
