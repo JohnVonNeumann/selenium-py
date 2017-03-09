@@ -8,6 +8,13 @@ import custom_logger as cl
 
 class KodeItTestSuite(unittest.TestCase):
 
+    log = cl.customLogger(logging.DEBUG)
+
+    def setUp(self):
+        baseUrl = "https://letskodeit.teachable.com/pages/practice"
+        self.driver = webdriver.Firefox()
+        self.driver.get(baseUrl)
+        self.log.info('Setup Complete.')
 
 
 
@@ -22,8 +29,9 @@ class KodeItTestSuite(unittest.TestCase):
 
 
 
-
-
+    def tearDown(self):
+        self.addCleanup(self.driver.quit)
+        self.log.info('Teardown Complete')
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)
