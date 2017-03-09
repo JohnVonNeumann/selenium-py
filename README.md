@@ -23,3 +23,7 @@ Learning Selenium to help improve my test automation skills. Using Python instea
 * Finally got the logging stuff finished, was interesting to see how they work. Obviously I just grazed the surface and there would be a lot more depth to it, but it was cool seeing how they are put together and formatted and whatnot.
 
 * Moved onto the more indepth assertion stuff, skipping a lot of basic content, adding a quick assert example just to get a simple example written down and whatnot. Pretty sure I understand the thing but yeah, quick one before I move onto implementing more complex stuff.
+
+* So I'm now upto this section involving pyTest and I don't think this is still to do with Selenium so I'm probably gonna now go backwards in content and start doing more action and item specific stuff on selenium. Build out a test suite with them all. Mainly making this decision because I have been asked recently to get to grips with Selenium and at the risk of taking instructions too explicitly. It's probably better to stick with explicit Selenium than "kinda relates to selenium".
+
+* So instead of fucking around with course videos, I'm just gonna go through each element of the site and write tests for it. I'll keep this suite together in the kode_it_test_suite.py file that I've just built. This will be my personal attempt at building an entire test suite to demonstrate my Selenium knowledge. At this stage I intend to keep it as one file. But as I go, I may decide that separating it into different files is more appropriate.
