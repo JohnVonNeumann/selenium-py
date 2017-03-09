@@ -20,14 +20,14 @@ class FindByIdName(unittest.TestCase):
     def testIdFind(self): #simple find by Id test, outputs message on completion
         elementById = self.driver.find_element_by_id(self.elementIdToFind)
         if elementById is not None:
-            self.log.debug("We found an element by the ID of " + self.elementIdToFind + ".")
+            self.log.info("We found an element by the ID of " + self.elementIdToFind + ".")
         else:
             self.log.error("Could not find an element by the ID of " + self.elementIdToFind + ".")
 
     def testNameFind(self): # simple find by name test, outputs message on completion
         elementByName = self.driver.find_element_by_name(self.elementNameToFind)
         if elementByName is not None:
-            self.log.debug("We found an element by the name of " + self.elementNameToFind + ".")
+            self.log.info("We found an element by the name of " + self.elementNameToFind + ".")
         else:
             self.log.error("Could not find an element by the name of " + self.elementNameToFind + ".")
 
