@@ -35,15 +35,20 @@ class KodeItTestSuite(unittest.TestCase):
             self.log.info("We found an element by the Class Name of " + self.elementClassToFind + ".")
         else:
             self.log.error("Could not find an element by the Class Name of " + self.elementClassToFind + ".")
-    # 
+
     # def testSearchEnterName(self):
-    #     elementSearchByName = self.driver.find_element_by_name("enter-name")
+    #     elementSearchByName = self.driver.find_element_by_name(".//*[@id='name'")
     #     if elementSearchByName is not None:
-    #         self.log.info("We found an element by the name of enter-name")
-    #         self.search_field = self.driver.find_element_by_name("enter-name")
+    #         self.log.info("We found an element by the xpath of .//*[@id='name']")
+    #         self.search_field = self.driver.find_element_by_xpath(".//*[@id='name']")
     #         self.search_field.send_keys("Selenium WebDriver Interview Questions")
     #         self.search_field.submit()
 
+    testSearchEnterName = self.driver.find_element_by_xpath(".//*[@id='carselect']")
+    all_options = element.find_elements_by_tag_name("option")
+    for option in all_options:
+        print("Value is: %s" % option.get_attribute("value"))
+        option.click()
 
 
 
