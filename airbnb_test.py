@@ -9,15 +9,37 @@ browser.get(baseUrl)
 
 #enter where you want to visit
 
+    #initial search element
+    <span class="fakeInput_14hw9u3" data-reactid="107">
+
+    #once inital has been clicked, modal opens up, where input
+    <input id="header-location--sm" class="input-large needsClick" placeholder="Destination, city, address" autocomplete="off" name="location" type="text"/>
+
 
 # enter checkin and checkout dates
+
+    #when (checkin date picker)
+    <input id="header-checkin--sm" class="checkin input-large ui-datepicker-target" name="checkin" placeholder="Check in" type="text"/>
+
+        # select checkin on the 16th
+        <a class="ui-state-default ui-state-hover" href="#">16</a>
+
+        # select checkout on the 18th
+        <a class="ui-state-default ui-state-hover" href="#">18</a>
 
 
 # select number of guests from dropdown
 
+    # select guests button
+    <button class="GuestPickerTrigger__button" type="button">
+
+    # select close
+    <button class="component_9w5i1l-o_O-component_button_r8o91c" type="button">
+
 
 # click on search button
 
-
+    # search button
+    <button class="btn btn-primary btn-large btn-block" type="submit">   Search </button>
 
 browser.quit()
