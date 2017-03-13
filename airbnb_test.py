@@ -13,20 +13,19 @@ browser.maximize_window()
     #initial search element
     #<input id="search-location" class="LocationInput input-large" name="location" placeholder="Destination, city, address" autocomplete="off" value="" data-reactid="20" type="text">
 
-searchElement = browser.find_element_by_name('location')
+searchElement = browser.find_element_by_id('search-location')
 searchElement.send_keys('Melbourne, Victoria' + Keys.RETURN)
 
-    #once inital has been clicked, modal opens up, where input
-    #<input id="header-location--sm" class="input-large needsClick" placeholder="Destination, city, address" autocomplete="off" name="location" type="text"/>
-
-
 # enter checkin and checkout dates
+
+#<input id="startDate" class="DateInput__input" aria-label="Check In" name="startDate" value="" placeholder="Check In" autocomplete="off" aria-describedby="" data-reactid="29" type="text"/>
+startDateElement = browser.find_element_by_id('startDate').click()
 
     #when (checkin date picker)
     #<input id="header-checkin--sm" class="checkin input-large ui-datepicker-target" name="checkin" placeholder="Check in" type="text"/>
 
         # select checkin on the 16th
-        #<a class="ui-state-default ui-state-hover" href="#">16#</a>
+        #<td class="CalendarDay CalendarDay--valid CalendarDay--hovered">15</td>
 
         # select checkout on the 18th
         #<a class="ui-state-default ui-state-hover" href="#">18#</a>
