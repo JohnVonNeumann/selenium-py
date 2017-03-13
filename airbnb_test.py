@@ -8,9 +8,11 @@ browser = webdriver.Firefox()
 browser.get(baseUrl)
 browser.maximize_window()
 
+
 #enter where you want to visit
 searchElement = browser.find_element_by_id('search-location')
 searchElement.send_keys('Melbourne, Victoria' + Keys.RETURN)
+
 
 # enter checkin and checkout dates
 startDateElement = browser.find_element_by_id('startDate').click()
@@ -25,8 +27,11 @@ addOneAdultClick = browser.find_element_by_xpath("html/body/main/div/div/div[2]/
 closeAddGuest = browser.find_element_by_xpath("html/body/main/div/div/div[2]/div[1]/div[1]/div/form/div/div/div[3]/div/div/div/div/div[4]/div/div[2]/div/button").click()
 browser.implicitly_wait(50)
 
+
 # click on search button
 clickSearch = browser.find_element_by_xpath("html/body/main/div/div/div[2]/div[1]/div[1]/div/form/div/div/div[4]/button").click()
 browser.implicitly_wait(50)
 
+
+#exit the script and close the window
 browser.quit()

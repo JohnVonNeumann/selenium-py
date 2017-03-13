@@ -4,6 +4,8 @@ Learning Selenium to help improve my test automation skills. Using Python instea
 
 > The best working example I have is the FindByIdName script. I am updating it with more and more advanced stuff as I go.
 
+> A real world example script I built would be the airbnb test, it runs a simple user iteraction simulation of selecting a travel destination along with dates guests before searching for relevant results.
+
 * Been spending some time getting Firepath setup for using xpath, strange how they bundle the thing into firefox but then they don't support some basic addon functionality. Had to go back to firebug vxx.18 in order to get the xpath stuff working. Even then, might have to port back further seeing as the course i'm only recommended much older than .18
 
 * Now have webdrivers running for Chrome and Firefox, I'll build tests for those two. Anything more than that I can learn on the job when I come across them.
@@ -33,3 +35,5 @@ Learning Selenium to help improve my test automation skills. Using Python instea
 * And I think I just learnt that Unitests and Selenium tests are not the same thing. So I assumed that unittests just added more functionality to selenium tests, but it appears I am wrong. Unit tests are part of an entirely different family of testing. Selenium tests are a type of functional test that are designed to emulate how an end user would operate with the site, they involved actual clickthroughs of buttons and whatnot. Whereas Unit tests are focused moreso on ensuring the codebase is being managed in a certain way, they are used for scaling and code quality assurances, they are more low level, not involving front end manipulation.
 
 * Some extra points on the differences betweeen testing methods, so intergration testing is focused moreso on the whole product, as I said in the previous addition, it's about how the end user will actually interact with it, integ tests involve testing of the front end components. Whereas unit tests revolve around pure function style stuff, they don't involve front end elements and the reason they are named unit tests is because they operate as a unit, you don't test numerous integrated parts and how they mesh together, you just test a model or a class in isolation.
+
+* During the creation of the AirBnb script, I questioned which would be the preferred method of finding elements, both for speed and reliability, obviously xpath is unique to the tee, but according to SO, xpath is much slower than finding by ID due to having to traverse the xpath hierachy that is given to it. Makes sense that the search method that is literally just following a path and not just cutting through to the id would be slower.
