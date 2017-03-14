@@ -1,5 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
+import pyformance
 
 
 class AirbnbTestSuite:
@@ -7,7 +8,7 @@ class AirbnbTestSuite:
     def __init__(self):
         self.browser = webdriver.Firefox()
         self.baseurl = "https://www.airbnb.com.au/"
-        self.browser.get(baseurl)
+        self.browser.get(self.baseurl)
         self.browser.maximize_window()
 
     def searchlocation(self):
@@ -37,7 +38,7 @@ class AirbnbTestSuite:
         self.browser.quit()
 
 ff = AirbnbTestSuite()
-ff.searchocation()
+ff.searchlocation()
 ff.checkinout()
 ff.selectguests()
 ff.completesearch()

@@ -1,1 +1,1 @@
-pyformance == "0.3.4"
+pyformance==0.3.4
