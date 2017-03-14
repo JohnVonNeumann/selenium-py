@@ -1,6 +1,8 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
-import pyformance
+from pyformance import meters
+from pyformance import reporters
+import time
 
 
 class AirbnbTestSuite:
@@ -10,11 +12,12 @@ class AirbnbTestSuite:
         self.baseurl = "https://www.airbnb.com.au/"
         self.browser.get(self.baseurl)
         self.browser.maximize_window()
+        self.timer = meters.Timer()
 
     def searchlocation(self):
         #enter where you want to visit
-        searchelement = self.browser.find_element_by_id('search-location')
-        searchelement.send_keys('Melbourne, Victoria' + Keys.RETURN)
+        self.searchelement = self.browser.find_element_by_id('search-location')
+        self.searchelement.send_keys('Melbourne, Victoria' + Keys.RETURN)
 
     def checkinout(self):
         # enter checkin and checkout dates
@@ -37,6 +40,8 @@ class AirbnbTestSuite:
     def finishtest(self):
         self.browser.quit()
 
+reporter = reporters.ConsoleReporter()
+reporter.report_now()
 ff = AirbnbTestSuite()
 ff.searchlocation()
 ff.checkinout()
